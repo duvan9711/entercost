@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>formulario</title>
+
+	<link rel="stylesheet" type="text/css" th:href="@{/css/estiloform_crearcuenta.css}">
+
+</head>
+<body>
+
+  <form th:action="@{/registrarse}">
+
+    <div class="formulario">
+      <h1>ㅤㅤㅤCREAR CUENTAㅤㅤㅤ</h1>
+
+      <div class="label">
+        <label form="name">NOMBRE:</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su nombre" required class="inputc">
+      </div>
+
+
+
+      <div class="label">
+        <label form="name">APELLIDO:</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su apellido" required class="inputc">
+      </div>
+
+
+      <div class="label">
+        <label form="name">EDAD:</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su edad actual" required class="inputc">
+      </div>
+
+
+      <div class="label">
+        <label form="name">TELEFONO</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su telefono" required class="inputc">
+      </div>
+
+
+      <div class="label">
+        <label for="pass">FECHA NACIMIENTO</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su fecha de nacimiento" required class="inputc">
+      </div>
+
+
+      <div class="label">
+        <label for="pass">DIRECCION</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su direccion" required class="inputc">
+      </div>
+
+
+      <div class="label">
+        <label form="email">CORREO</label>
+      </div>
+      <div>
+        <input type="email" placeholder="Ingrese su correo" required class="inputc">
+      </div>
+
+
+      <div class="label">
+        <label for="pass">CONTRASEÑA</label>
+      </div>
+      <div>
+        <input type="password" placeholder="Ingrese su contraseña" required class="inputc">
+      </div>
+
+
+
+      <div class="label">
+      <label form="color2">SELECCIONA TU CARGO</label>
+      <select name="color2" id="color2 ">
+        <option value="blue">ADMINISTRADOR</option>
+        <option value="blue">CONTADOR</option>
+        <option value="green">JEFE DE COMPRAS</option>
+        <option value="gray">AUXILIAR DE ALMACEN</option>
+      </select><br><br>
+
+
+
+
+
+      <div class="boton">
+        <input type="submit" value="REGISTRARSE" class="botonc">
+      </div>
+
+      <div class="boton">
+        <input type="reset" value="CANCELAR" class="botonc">
+      </div>
+
+      <div class="link">
+        <div><a th:href="@{/forminiciarsesion}">¿Iniciar sesion?</a></div>
+
+
+      </div>
+
+
+    </div>
+  </form>
+
+
+
+
+
+
+
+</body>
+</html>

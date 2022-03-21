@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>formulario</title>
+
+  <link rel="stylesheet" type="text/css" th:href="@{/css/estiloform_iniciarsesion.css}">
+</head>
+
+<body>
+
+
+  <form th:action="@{/IniciarSesion}" th:object="${usuario}" method="POST">
+    <div class="formulario">
+      <h1>ㅤㅤㅤㅤㅤINICIAR SESIONㅤㅤㅤ ㅤㅤ</h1>
+
+      <div class="label">
+        <label form="name">NUMERO DE IDENTIFICACION</label>
+      </div>
+      <div>
+        <input type="text" placeholder="Ingrese su N.I" required class="inputc" th:field="*{idUsuario}">
+      </div>
+
+
+      <div class="label">
+        <label for="pass">CONTRASEÑA</label>
+      </div>
+      <div>
+        <input type="password" placeholder="Ingrese su contraseña" required class="inputc" th:field="*{clave}">
+      </div>
+
+
+      <div class="label">
+        <label form="color2">SELECCIONA TU CARGO</label>
+        <select name="perfil" >
+          <option value="1" >ADMINISTRADOR</option>
+          <option value="2">CONTADOR</option>
+          <option value="3">JEFE DE COMPRAS</option>
+          <option value="4">AUXILIAR DE ALMACEN</option>
+        </select><br><br>
+
+
+        <div class="boton">
+          <input type="submit" value="INICIAR SESION" class="botonc" >
+        </div>
+
+        <div class="boton">
+          <input type="reset" value="CANCELAR" class="botonc">
+        </div>
+
+        <div class="link">
+          <div><a th:href="@{/formcrearcuenta}">Registrarse</a></div>
+          <div><a th:href="@{/formrecup}">Cambiar constraseña</a></div>
+        </div>
+
+
+      </div>
+  </form>
+
+    <script type="text/javascript" th:src="@{/js/miScript.js}" ></script>
+
+</body>
